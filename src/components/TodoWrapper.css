@@ -1,8 +1,10 @@
 body {
   background-image: url('src/assets/images/pexels-codioful-(formerly-gradienta)-6985003.jpg');
-  background-size: cover;
-  
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed; /* This keeps the background fixed when scrolling */
 }
+
 
 
 .card {

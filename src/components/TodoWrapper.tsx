@@ -29,10 +29,11 @@ const TodoWrapper = () => {
     setEditingIndex(null);
   };
 
+  // updates the index value for the setEditingIndex state function so that the program knows which element needs to be edited
   const handleEdit = (index: number) => {
     setEditingIndex(index);
   };
-
+  // sets the index value for the setEditingIndex state function to null, nullifying the rendering logic of the user edit
   const handleCancelEdit = () => {
     setEditingIndex(null);
   };
@@ -40,7 +41,10 @@ const TodoWrapper = () => {
   return (
     <div className="card card-background">
       <h2 className="card-title">Todo List</h2>
-      <TodoForm addTodo={addTodo} />
+      {/* passing the addTodo prop to the TodoForm component */}
+      <TodoForm 
+      addTodo={addTodo} 
+      />
       {todos.map((todo, index) => (
         <div key={index}>
           {editingIndex === index ? (
